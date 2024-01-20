@@ -1,13 +1,13 @@
-package com.backend.saajha.controller;
+package com.backend.saajha.controllers;
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import com.backend.saajha.dto.UserDto;
-import com.backend.saajha.model.User;
-import com.backend.saajha.service.UserService;
+import com.backend.saajha.dtos.UserDto;
+import com.backend.saajha.models.User;
+import com.backend.saajha.services.UserService;
 
 @RequiredArgsConstructor
 @RestController

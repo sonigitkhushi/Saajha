@@ -1,7 +1,10 @@
-package com.backend.saajha.dto;
-import com.backend.saajha.model.User;
+package com.backend.saajha.dtos;
+
+
+import com.backend.saajha.models.User;
 
 import lombok.Getter;
+
 @Getter
 public class UserLoginDto {
 

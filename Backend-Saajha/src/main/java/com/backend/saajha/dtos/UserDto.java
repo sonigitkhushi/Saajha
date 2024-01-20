@@ -1,4 +1,5 @@
-package com.backend.saajha.dto;
+package com.backend.saajha.dtos;
+
 
 public class UserDto {
 
@@ -31,4 +32,3 @@ public class UserDto {
         this.password = password;
     }
 }
-

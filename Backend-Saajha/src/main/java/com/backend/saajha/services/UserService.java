@@ -1,4 +1,5 @@
-package com.backend.saajha.service;
+package com.backend.saajha.services;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,9 +10,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.backend.saajha.dto.UserDto;
-import com.backend.saajha.exception.AppException;
-import com.backend.saajha.model.User;
+import com.backend.saajha.dtos.UserDto;
+import com.backend.saajha.exceptions.AppException;
+import com.backend.saajha.models.User;
 import com.backend.saajha.repository.UserRepository;
 
 
@@ -31,7 +32,7 @@ public class UserService implements UserDetailsService {
 
     public User getUserById(Long id, Authentication authentication) {
         User user = userRepository.findById(id)
-                .orElseThrow();
+                .orElseThrow(() -> new AppException("User not found.", HttpStatus.NOT_FOUND));
         if (!user.getEmail().equals(authentication.getName())) {
             throw new AppException("Access denied.", HttpStatus.BAD_REQUEST);
         }

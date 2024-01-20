@@ -1,4 +1,5 @@
-package com.backend.saajha.model;
+package com.backend.saajha.models;
+
 
 import jakarta.persistence.*;
 import lombok.Data;

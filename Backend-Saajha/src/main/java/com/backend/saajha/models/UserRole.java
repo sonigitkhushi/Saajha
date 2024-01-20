@@ -1,4 +1,5 @@
-package com.backend.saajha.model;
+package com.backend.saajha.models;
+
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -38,12 +39,5 @@ public class UserRole implements GrantedAuthority {
 
     public void setId(Long id) {
         this.id = id;
-    }
-    public Object getEmail() {
-        return null;
-    }
-    public void setPassword(String hashedNewPassword) {
-    }
-    public void setEmail(String newEmail) {
     }
 }

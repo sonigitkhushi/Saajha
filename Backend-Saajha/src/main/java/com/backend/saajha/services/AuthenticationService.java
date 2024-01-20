@@ -1,4 +1,5 @@
-package com.backend.saajha.service;
+package com.backend.saajha.services;
+
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.backend.saajha.dto.UserLoginDto;
-import com.backend.saajha.model.User;
-import com.backend.saajha.model.UserRole;
+import com.backend.saajha.dtos.UserLoginDto;
+import com.backend.saajha.models.User;
+import com.backend.saajha.models.UserRole;
 import com.backend.saajha.repository.UserRepository;
 import com.backend.saajha.repository.UserRoleRepository;
 

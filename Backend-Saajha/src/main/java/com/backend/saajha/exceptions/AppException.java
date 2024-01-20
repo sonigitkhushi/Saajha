@@ -1,4 +1,5 @@
-package com.backend.saajha.exception;
+package com.backend.saajha.exceptions;
+
 
 import lombok.*;
 import org.springframework.http.HttpStatus;
